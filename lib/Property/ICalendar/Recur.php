@@ -172,7 +172,7 @@ class Recur extends Property {
                 $date = new DateTime($this->root, null, $v);
                 $values[strtolower($k)] = $date->getJsonValue()[0];
             } elseif (strcmp($k, 'COUNT') === 0) {
-                $values[strtolower($k)] = intval($v);
+                $values[strtolower($k)] = intval($v[0]);
             } else {
                 $values[strtolower($k)] = $v;
             }
